@@ -1,18 +1,40 @@
 {
-  "name": "drobni/drobni",
-  "description": "Theme Drobni",
-  "type": "shopware-platform-plugin",
-  "license": "MIT",
-  "autoload": {
-    "psr-4": {
-      "Drobni\\": "src/"
+    "name":        "topdata-software-gmbh/topdata-theme-demoshop-sw6",
+    "version":     "1.0.0",
+    "description": "Topdata Shopware 6 Demoshop Theme",
+    "type":        "shopware-platform-plugin",
+    "license":     "MIT",
+    "authors":     [
+        {
+            "name":     "TopData Software GmbH",
+            "homepage": "https://www.topdata.de",
+            "role":     "Manufacturer"
+        }
+    ],
+    "autoload":    {
+        "psr-4": {
+            "Topdata\\TopdataThemeDemoshopSW6\\": "src/"
+        }
+    },
+    "extra":       {
+        "shopware-plugin-class": "Topdata\\TopdataThemeDemoshopSW6",
+        "label":                 {
+            "de-DE": "Topdata Theme Shopware6 Demoshop",
+            "en-GB": "Topdata Theme Shopware6 Demoshop"
+        },
+        "description":           {
+            "de-DE": "Theme für den Topdata Shopware6 Demoshop",
+            "en-GB": "Theme for the Topdata Shopware6 Demoshop"
+        },
+        "manufacturerLink":      {
+            "de-DE": "https://www.topdata.de",
+            "en-GB": "https://www.topdata.de"
+        },
+        "supportLink":           {
+            "de-DE": "https://www.topdata.de",
+            "en-GB": "https://www.topdata.de"
+        }
+
     }
-  },
-  "extra": {
-    "shopware-plugin-class": "Drobni\\Drobni",
-    "label": {
-      "de-DE": "Theme Drobni plugin",
-      "en-GB": "Theme Drobni plugin"
-    }
-  }
 }
+

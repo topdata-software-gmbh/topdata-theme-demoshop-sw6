@@ -1,7 +1,7 @@
 {
-    "drobni": {
-        "inkFinder": "TopFinder",
-        "categorys": "Kategorien",
+    "TopdataThemeDemoshopSW6": {
+        "inkFinder":         "TopFinder",
+        "categories":        "Kategorien",
         "offcanvasMenuHead": "Hauptmenü"
     }
 }

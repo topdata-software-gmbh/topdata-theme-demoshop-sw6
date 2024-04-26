@@ -1,22 +1,22 @@
 {
-  "name": "Drobni",
-  "author": "Shopware AG",
-  "views": [
-     "@Storefront",
-     "@Plugins",
-     "@Drobni"
-  ],
-  "style": [
-    "app/storefront/src/scss/overrides.scss",
-    "@Storefront",
-    "app/storefront/src/scss/base.scss"
-  ],
-  "script": [
-    "@Storefront",
-    "app/storefront/src/main.js"
-  ],
-  "asset": [
-    "@Storefront",
-    "app/storefront/dist/assets"
-  ]
+    "name":   "TopdataThemeDemoshopSW6",
+    "author": "Topdata Software GmbH",
+    "views":  [
+        "@Storefront",
+        "@Plugins",
+        "@TopdataThemeDemoshopSW6"
+    ],
+    "style":  [
+        "app/storefront/src/scss/overrides.scss",
+        "@Storefront",
+        "app/storefront/src/scss/base.scss"
+    ],
+    "script": [
+        "@Storefront",
+        "app/storefront/src/main.js"
+    ],
+    "asset":  [
+        "@Storefront",
+        "app/storefront/dist/assets"
+    ]
 }

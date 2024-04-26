@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Drobni\Resources\snippet\de_DE;
+namespace Topdata\TopdataThemeDemoshopSW6\Resources\snippet\de_DE;
 
 use Shopware\Core\System\Snippet\Files\SnippetFileInterface;
 
