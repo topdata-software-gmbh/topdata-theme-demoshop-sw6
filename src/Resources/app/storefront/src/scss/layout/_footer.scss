@@ -1,0 +1,132 @@
+/*
+Footer
+==================================================
+Contains custom styles for the footer located at the bottom of the page.
+*/
+
+
+.footer-main {
+    border:none !important;
+    background-color: #303030;
+    color: #fff;
+    .container {
+        background: unset;
+    }
+
+    a {
+        color: #fff;
+    }
+
+    .footer-vat {
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    .footer-column-headline{
+        color: #fff;
+
+        a{
+            color: #fff;
+        }
+    }
+
+    .footer-middle-backline {
+        position: relative;
+        top: 12px;
+        right: 0;
+        left: 0;
+
+        text-align: center;
+
+        span {
+            position: relative;
+            top: -36px;
+            padding: 0 40px;
+            background: #303030;
+
+            img {
+                height: 70px;
+            }
+        }
+    }
+}
+
+.footer-link, .footer-contact-hotline a {
+    color: #fff;
+}
+
+.telexroll-footer-banner-container {
+    border: none !important;
+    padding: 40px 0;
+    text-align: center;
+    color: #fff;
+    background-color: #303030;
+
+    a {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    .container {
+        background: unset;
+    }
+}
+
+.telexroll-footer-newsletter-container{
+
+    padding: 40px 0;
+    text-align: center;
+    color: #202020;
+    border-top: solid 1px #f1f1f1 !important;
+    background: -webkit-linear-gradient(bottom, rgba(160, 160, 160, 0.8), rgba(238, 238, 238, 1.0));
+    background: -moz-linear-gradient(bottom, rgba(160, 160, 160, 0.8), rgba(238, 238, 238, 1.0));
+    background: linear-gradient(to top, rgba(160, 160, 160, 0.8), rgba(238, 238, 238, 1.0));
+
+    a {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    .container {
+        background: unset;
+    }
+
+    .newsletter-headline {
+        color: #fff; //$telexroll-main-color;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .form-group {
+        margin: 0;
+        display: inline-block;
+
+        label {
+            display: none;
+        }
+    }
+
+
+    .btn-newsletter{
+        background-color: #fff;
+    }
+    .telexroll-newsletter-privacy > div {
+        display: none;
+    }
+    .privacy-notice {
+        display: block !important;
+    }
+
+}
+
+@media (min-width:992px) {
+    .telexroll-footer-newsletter-container{
+        .form-group {
+            width: 450px;
+        }
+    }
+}
+.footer-service-menu-list{display:none}
+.footer-bottom{background:#12688f !important}
+.btn-primary{background-color:#13719b !important;}

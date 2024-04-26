@@ -1,0 +1,30 @@
+/* Registrierung nur als Firma */
+
+/*
+ * Variables, Mixins, Functions
+ * ---------------------------- */
+@import 'variables';
+
+/*
+ * Base stuff
+ * ---------- */
+@import 'base/base';
+
+
+
+/*
+ * Layout stuff
+ * ---------- */
+@import "layout/header";
+@import "layout/main-navigation";
+@import 'layout/footer';
+@import 'layout/footer_social';
+
+/*
+ * Components
+ * ---------- */
+@import 'component/cms-block';
+@import 'component/cms-microsoft';
+@import 'component/cms-panel';
+@import 'component/cms-vendor';
+@import 'component/product-box';

@@ -1,0 +1,37 @@
+/*
+CMS blocks
+==============================================
+Skin styling for cms blocks and
+specific skin styling for elements dependent on their parent block
+*/
+
+
+.cms-telexroll-company-teaser{
+    border-bottom: 1px solid #f2f2f2;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cms-block-text-hero {
+    .cms-element-text hr {
+        max-width: none;
+    }
+}
+
+.cms-element-category-navigation {
+    display: none;
+}
+
+@include media-breakpoint-up(lg) {
+
+    .cms-element-category-navigation {
+        display: inherit;
+        background: #716e6e0a;
+    }
+}
+
+.cms-block-trans{
+    .boxed {
+        background-color: unset;
+    }
+}

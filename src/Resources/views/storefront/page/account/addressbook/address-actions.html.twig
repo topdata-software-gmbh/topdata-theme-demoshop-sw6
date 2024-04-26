@@ -1,0 +1,19 @@
+{% sw_extends '@Storefront/storefront/page/account/addressbook/address-actions.html.twig' %}
+
+
+{# Rechnungsaddresse nicht änderbar #}
+{% block page_account_address_actions_set_default_billing %}
+{% endblock %}
+
+{# Rechnungsaddresse nicht änderbar #}
+{% block page_account_address_actions_update %}
+    {% if defaultBillingAddress.id != address.id %}
+    <div class="col-auto">
+        <a href="{{ path('frontend.account.address.edit.page', {'addressId': address.id}) }}"
+            title="{{ "account.addressesContentItemActionEdit"|trans|striptags }}"
+            class="btn btn-light btn-sm">
+            {{ "account.addressesContentItemActionEdit"|trans|sw_sanitize }}
+        </a>
+    </div>
+    {% endif %}
+{% endblock %}

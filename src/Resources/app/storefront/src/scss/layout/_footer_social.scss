@@ -1,0 +1,81 @@
+.footer-social {
+  display: flex;
+
+  .footer-social-button {
+
+    height: 50px;
+    margin: 0 10px 10px 0;
+    width: 50px;
+    display: flex;align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 1.4em;
+    border-radius: 5px;
+
+
+    :hover{
+      background-color: #000;
+    }
+
+    i {
+      width: 50px;
+      height: 50px;
+      background-color: #fff //$telexroll-main-color;
+    }
+
+
+    .lab {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+    }
+
+    .la-webpage{
+      -webkit-mask-image: url('/bundles/telexroll/assets/icon/social/webpage.svg');
+      -webkit-mask-size: 50px 46px;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: 0 2px;
+      mask-image: url('/bundles/telexroll/assets/icon/social/webpage.svg');
+      mask-size: 50px 46px;
+      mask-repeat: no-repeat;
+      mask-position: 0 2px;
+    }
+
+    .la-facebook-f{
+      -webkit-mask-image: url('/bundles/telexroll/assets/icon/social/facebook.svg');
+      -webkit-mask-size: 50px 50px;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: 5px 5px;
+      mask-image: url('/bundles/telexroll/assets/icon/social/facebook.svg');
+      mask-size: 50px 50px;
+      mask-repeat: no-repeat;
+      mask-position: 5px 5px;
+    }
+
+
+    .la-xing{
+      -webkit-mask-image: url('/bundles/telexroll/assets/icon/social/xing.svg');
+      -webkit-mask-size: 50px 45px;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: 0 5px;
+      mask-image: url('/bundles/telexroll/assets/icon/social/xing.svg');
+      mask-size: 50px 45px;
+      mask-repeat: no-repeat;
+      mask-position: 0 5px;
+    }
+
+
+    .la-linkedin{
+      -webkit-mask-image: url('/bundles/telexroll/assets/icon/social/linkedin.svg');
+      -webkit-mask-size: 50px 50px;
+      -webkit-mask-repeat: no-repeat;
+      mask-image: url('/bundles/telexroll/assets/icon/social/linkedin.svg');
+      mask-size: 50px 50px;
+      mask-repeat: no-repeat;
+    }
+  }
+}

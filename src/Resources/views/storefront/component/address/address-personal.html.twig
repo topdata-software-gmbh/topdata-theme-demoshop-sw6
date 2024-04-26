@@ -1,0 +1,10 @@
+{% sw_extends '@Storefront/storefront/component/address/address-personal.html.twig' %}
+
+{# Registrierung nur als Firma #}
+{% block component_address_personal_account_type %}
+    {% if refForm and refForm == "register" %}
+        <input type="hidden" name="{% if prefix %}{{ prefix }}[accountType]{% else %}accountType{% endif %}" value="{{ constant('Shopware\\Core\\Checkout\\Customer\\CustomerEntity::ACCOUNT_TYPE_BUSINESS') }}" />
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% sw_extends '@Storefront/storefront/component/account/register.html.twig' %}
+
+
+{# Registrierung nur als Firma #}
+{% block component_account_register_personal_address_fields %}
+    {% sw_include '@Storefront/storefront/component/address/address-personal.html.twig' with {
+        'showBirthdayField': shopware.config.core.loginRegistration.showBirthdayField,
+        'accountType': constant('Shopware\\Core\\Checkout\\Customer\\CustomerEntity::ACCOUNT_TYPE_BUSINESS'),
+        'refForm': "register"
+    } %}
+{% endblock %}

@@ -1,0 +1,29 @@
+{% sw_extends '@Storefront/storefront/base.html.twig' %}
+
+{% block base_footer %}
+    {% block telexroll_footer_newsletter %}
+        {% sw_include '@Storefront/storefront/layout/footer/footer-newsletter.html.twig' %}
+
+    {% endblock %}
+    {#  % block telexroll_footer_banner %}
+        {% sw_include '@Storefront/storefront/layout/footer/footer-banner.html.twig' %}
+    {% endblock %#}
+
+    {{ parent() }}
+{% endblock %}
+
+{% block base_header_inner %}
+    {{ parent() }}
+
+
+{% endblock %}
+
+{% block base_flashbags %}
+    {% if page.header.navigation.active is defined %}
+        {% set activeCategory = page.header.navigation.active %}
+        {% if activeCategory.media.url is defined %}
+            <div class="category-main-image"><img src="{{ activeCategory.media.url }}" alt="{{ activeCategory.translated.name }}"></div>
+        {% endif %}
+    {% endif %}
+    {{ parent() }}
+{% endblock %}

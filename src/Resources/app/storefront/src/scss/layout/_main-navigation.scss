@@ -1,0 +1,83 @@
+/*
+Main navigation
+==============================================
+Custom styling for main navigation on larger screens.
+
+Based on bootstrap nav:
+https://getbootstrap.com/docs/4.3/components/navs/
+*/
+
+@include media-breakpoint-up(md) {
+    .navigation-flyout-categories.is-level-1 {
+        display: none;
+    }
+
+    .main-navigation {
+        font-size: unset;
+        background-color: #101010; //$telexroll-main-color;
+
+        .container {
+            background: unset;
+        }
+
+        .navigation-flyout-link {
+            font-size: unset;
+            margin: unset;
+        }
+        .navigation-flyout-categories{
+            .is-level-0 {
+                font-weight: unset;
+                > .navigation-flyout-col {
+                    margin-bottom: 5px;
+                    position: relative;
+
+                    &::before{
+                        content: unset;
+                    }
+                }
+            }
+        }
+
+        .main-navigation-link {
+            color: #ffffff;
+        }
+    }
+}
+
+.telexroll-breadcrumb{
+    background-color: #fff;
+    .breadcrumb.cms-breadcrumb {
+        margin-bottom: 0px;
+        min-height:50px;
+        ol {
+            padding: unset;
+            margin: unset;
+        }
+    }
+}
+
+.category-navigation{
+    &.level-0 {
+
+        > .category-navigation-entry {
+            border: unset;
+            > .category-navigation-link {
+                display: none;
+            }
+        }
+    }
+}
+.container-main{
+    padding:0px;
+}
+.icon{
+    color:#fff;
+}
+.btn-buy{
+    background-color:#4f85a9;
+}
+.main-navigation{display:none;}
+.is-left{
+    opacity:0.8 !important;
+    background:#303030 !important;
+}

@@ -1,0 +1,18 @@
+{% sw_extends '@Storefront/storefront/layout/navigation/offcanvas/navigation.html.twig' %}
+
+{% block layout_navigation_offcanvas_navigation_actions %}
+    {{ parent() }}
+    <div class="navigation-offcanvas-container service-menu d-lg-none">
+        <div class="navigation-offcanvas-overlay-content js-navigation-offcanvas-overlay-content">
+            <div class="navigation-offcanvas-headline">{{ 'telexroll.offcanvasMenuHead'|trans }}</div>
+
+            <ul class="list-unstyled navigation-offcanvas-list">
+                {% for category in page.header.serviceMenu.elements %}
+                    {% set item = {category: category} %}
+                    {% sw_include '@Storefront/storefront/layout/navigation/offcanvas/item-link.html.twig' with { item: item } %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}
+

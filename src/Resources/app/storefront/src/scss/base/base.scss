@@ -1,0 +1,119 @@
+
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  //font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+
+footer {
+  background-color: #e7e7e7;
+
+  .footer-bottom {
+    background: none;
+  }
+
+  .footer-link {
+  }
+
+  .container {
+    background-color: #e7e7e7;
+  }
+}
+
+.register-form{
+  .register-personal {
+    .address-company{
+      .js-field-toggle-contact-type-company {
+        display: block !important;
+      }
+    }
+  }
+}
+
+
+.topdata-top-finder-pro {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.thumbnail {
+
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: border .2s ease-in-out;
+  -o-transition: border .2s ease-in-out;
+  transition: border .2s ease-in-out;
+
+
+  > img, a > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .caption {
+    padding: 9px;
+    color: #333;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.eService-service,
+.fulfilment-service,
+.shipping-service {
+
+  .boxed {
+
+    background-color: unset;
+    color: #fff;
+    padding-top: 30px;
+  }
+  .thumbnail {
+    background-color: unset;
+    border: unset;
+
+    h3 {
+      color: #fff;
+    }
+  }
+}
+
+
+.eService-service {
+  .panel {
+    background-color: unset;
+
+    .panel-footer {
+      background-color: unset;
+    }
+  }
+}
+
+.d-flex {
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.section-home-techno{
+  min-height: 500px;
+}
+.is-ctl-topfinder,.is-ctl-search{
+  .category-main-image{display:none}
+}
+.telexroll-search{
+  background: #000 !important;
+  padding: 10px;
+}
+

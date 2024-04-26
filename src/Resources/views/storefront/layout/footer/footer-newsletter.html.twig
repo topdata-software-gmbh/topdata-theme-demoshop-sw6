@@ -1,0 +1,54 @@
+{% block telexroll_footer_newsletter %}
+    <div class="telexroll-footer-newsletter-container">
+        <div class="container">
+            {% block telexroll_layout_footer_newsletter_infotext %}
+                <div class="infotext">
+                    <h2 class="h3">{{ "footer.newsletterHeadline"|trans|sw_sanitize }}</h2>
+                    <p>{{ "footer.newsletter"|trans|sw_sanitize }}</p>
+                </div>
+            {% endblock %}
+
+            <div class="cms-block cms-block-form">
+                <div class="cms-element-form">
+                    <form action="{{ path('frontend.form.newsletter.register.handle') }}" method="post" data-form-csrf-handler="true" data-form-validation="true">
+                        <div class="mb-4">
+                            {% block telexroll_layout_footer_newsletter_email %}
+                                {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
+                                    with {
+                                    fieldName: 'email',
+                                    type: 'email',
+                                    required: true,
+                                    label: 'newsletter.labelMail',
+                                    placeholder: 'newsletter.placeholderMail'
+                                }
+                                %}
+                            {% endblock %}
+                            {% block telexroll_layout_footer_newsletter_submit %}
+                                <button type="submit" class="btn btn-newsletter">
+                                            <span class="footer-newsletter-icon">
+                                                {% sw_icon 'paperplane' style {'color': 'dark'} %}
+                                            </span>
+                                </button>
+                            {% endblock %}
+                        </div>
+
+                        {% block telexroll_layout_footer_newsletter_privacy %}
+                            <div class="telexroll-newsletter-privacy">
+                                {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-privacy.html.twig' %}
+                            </div>
+                        {% endblock %}
+                        {% block cms_form_newsletter_hidden_fields %}
+                            <div class="form-hidden-fields">
+                                {% block cms_form_newsletter_csrf %}
+                                    {{ sw_csrf('frontend.form.newsletter.register.handle') }}
+                                {% endblock %}
+                                <input type="hidden" name="option" value="{{ constant('Shopware\\Storefront\\Controller\\FormController::SUBSCRIBE') }}">
+                                <input type="submit" class="submit--hidden d-none" />
+                            </div>
+                        {% endblock %}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

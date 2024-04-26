@@ -1,0 +1,24 @@
+{% sw_extends '@Storefront/storefront/page/account/profile/index.html.twig' %}
+
+{# Registrierung nur als Firma #}
+{% block page_account_profile_personal_form %}
+        {% block page_account_profile_personal_fields %}
+            {% sw_include '@Storefront/storefront/page/account/profile/personal.html.twig' with {
+                'showBirthdayField': shopware.config.core.loginRegistration.showBirthdayField,
+                'showVatIdField': true,
+                'data': context.customer
+            } %}
+        {% endblock %}
+{% endblock %}
+
+
+{# Registrierung nur als Firma #}
+{% block page_account_profile_credentials_change_mail %}
+    <div class="col-3">
+        &nbsp;
+    </div>
+{% endblock %}
+
+{# Registrierung nur als Firma #}
+{% block page_account_profile_mail_collapse %}
+{% endblock %}

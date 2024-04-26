@@ -1,0 +1,7 @@
+{% sw_extends '@Storefront/storefront/component/address/address-personal-company.html.twig' %}
+{# Registrierung nur als Firma #}
+{% block component_account_register_company_fields %}
+    <div class="address-company">
+    {{ parent() }}
+    </div>
+{% endblock %}

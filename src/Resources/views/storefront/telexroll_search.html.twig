@@ -1,0 +1,32 @@
+<div class="telexroll1-search">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-auto">
+                {% block layout_header_navigation_toggle_tablet %}
+                    <div class="nav-main-toggle">
+                        {% block layout_header_navigation_toggle_tablet_button %}
+                            <button class="btn nav-main-toggle-btn header-actions-btn"
+                                    type="button"
+                                    data-offcanvas-menu="true"
+                                    aria-label="{{ "general.menuLink"|trans|striptags }}">
+                                {% block layout_header_navigation_toggle_tablet_button_icon %}
+                                    {% sw_icon 'stack' %}
+                                {% endblock %}
+
+                            </button>
+                        {% endblock %}
+                    </div>
+                {% endblock %}
+            </div>
+            <div class="col">
+                {% sw_include '@Storefront/storefront/layout/header/search.html.twig' %}
+            </div>
+            <div class="col-auto">
+                <a href="#" class="btn ttf-main-toggle-btn" data-toggle="modal" data-target="#topdata-finder-popup">
+                    {% sw_icon 'printer' %}
+
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

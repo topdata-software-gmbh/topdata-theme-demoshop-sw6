@@ -1,0 +1,87 @@
+
+.cms-section {
+  &.microsoft365
+  {
+    .panel-header {
+      .ow-ribbon-container {
+        height: 25px;
+        margin: 10px;
+        color: crimson;
+        font-weight: bold;
+
+      }
+      .price {
+        font-size: x-large;
+        font-weight: bold;
+      }
+    }
+
+    .ow-summary{
+      min-height: 200px;
+
+    }
+
+    .ow-paragraph {
+      h3 {
+          font-size: medium;
+          font-weight: bold;
+      }
+    }
+  }
+}
+
+
+.ow-icons-wrapper{
+  min-height: 200px;
+}
+
+
+.ow-icons {
+  padding: 0;
+  font-size: 11px;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+
+  li{
+    padding: 0 10px;
+
+    span{
+      display: block;
+      text-align: center;
+      margin: 0;
+      max-width: 44px;
+    }
+  }
+}
+
+.ow-icon {
+  display: inline-block;
+  line-height: 0;
+
+  &::before {
+    display: block;
+    width: 48px;
+  }
+
+  &.ic-msoutlook::before{content: url('/bundles/telexroll/assets/icon/microsoft365/Outlook_64x.svg');}
+  &.ic-msword::before{content: url('/bundles/telexroll/assets/icon/microsoft365/Word_64x.svg');}
+  &.ic-msexcel::before{content: url('/bundles/telexroll/assets/icon/microsoft365/Excel_64x.svg');}
+  &.ic-mspowerpoint::before{content: url('/bundles/telexroll/assets/icon/microsoft365/PowerPoint_64x.svg');}
+  &.ic-mspublisher::before{content: url('/bundles/telexroll/assets/icon/microsoft365/Publisher_64x.svg');}
+  &.ic-msaccess::before{content: url('/bundles/telexroll/assets/icon/microsoft365/Access_64x.svg');}
+
+  &.ic-msteams::before{content: url('/bundles/telexroll/assets/icon/microsoft365/Teams_64x.svg');}
+  &.ic-msexchange::before{content: url('/bundles/telexroll/assets/icon/microsoft365/Exchange_64x.svg');}
+  &.ic-msonenote::before{content: url('/bundles/telexroll/assets/icon/microsoft365/OneNote_64x.svg');}
+  &.ic-msonedrive::before{content: url('/bundles/telexroll/assets/icon/microsoft365/OneDrive_64x.svg');}
+  &.ic-mssharepoint::before{content: url('/bundles/telexroll/assets/icon/microsoft365/SharePoint_64x.svg');}
+  &.ic-msintune::before{content: url('/bundles/telexroll/assets/icon/microsoft365/Icon-intune-329.svg');}
+  &.ic-msazureinformationprotection::before{content: url('/bundles/telexroll/assets/icon/microsoft365/Icon-identity-229.svg');}
+  &.ic-msbookings::before{content: url('/bundles/telexroll/assets/icon/microsoft365/Bookings_64x.svg');}
+
+
+
+
+}

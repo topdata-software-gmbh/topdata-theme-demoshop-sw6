@@ -1,0 +1,255 @@
+{% sw_extends '@Storefront/storefront/page/content/index.html.twig' %}
+{% block base_main_inner %}
+    <div class="container">
+{% if page.header.navigation.active.translated.name != 'Home' %}
+    <style>
+        .topdata-top-finder-pro-container{
+            display:none;
+        }
+    </style>
+    <div class="telexroll-breadcrumb">
+        {% block cms_breadcrumb %}
+            {{ parent() }}
+        {% endblock %}
+    </div>
+        {% endif %}
+    </div>
+    <div class="container-main">
+        {% block page_content %}
+            {% block cms_content %}
+                {# @deprecated tag:v6.5.0 - keep if branch - page.cmsPage will be removed. Use page.landingPage.cmsPage instead #}
+                {% if feature('v6.5.0.0') %}
+                    {% set cmsPageClasses = ('cms-page ' ~ page.landingPage.cmsPage.cssClass|striptags)|trim %}
+                    {% set cmsPage = page.landingPage ? page.landingPage.cmsPage : page.cmsPage %}
+                {% else %}
+                    {% set cmsPageClasses = ('cms-page ' ~ page.cmsPage.cssClass|striptags)|trim %}
+                    {% set cmsPage = page.cmsPage %}
+                {% endif %}
+                {% set landingPage = page.landingPage ? page.landingPage : {} %}
+                <div class="{{ cmsPageClasses }}">
+                    {% block page_content_blocks %}
+                        {% sw_include "@Storefront/storefront/page/content/detail.html.twig" with {'cmsPage': cmsPage, 'landingPage': landingPage} %}
+                        {% if page.header.navigation.active.translated.name == 'Home' %}
+                            <div class="topdata_test">
+                                <div style="padding-top:90px;width:100%;height:300px;background-image:url('https://shopware6.topdata.de/media/d4/93/a8/1680183540/banner.png');background-position:0px 100%;background-repeat:no-repeat;border-bottom: solid 1px #ededed;background-size:contain;">
+                                  <h1 style="color:#fff">UNSERE PLUGINS</h1>
+                                    <br/>
+                                    <p style="color:#fff;font-size:20px;">
+                                        Mit den smarten Plugins von TopData bringen Sie Farbe in Ihren Shopware-Alltag <br/>und bescheren Ihren Kunden fulminante Einkaufserlebnisse.
+                                    </p>
+                                </div>
+                                <div class="row container" style="padding-left:0px !important;padding-right:0px !important;margin:auto;text-align:center;margin-top:70px">
+                                    <div class="col-lg-4" style="text-align:left !important;margin:0px !important">
+                                        <div style="margin:auto;text-align:center;border: solid 1px #b9b9b9;background-color:#eee;padding-top:30px;padding-left:30px;padding-right:30px;">
+                                            <div id="main3" class="rahmen col-md-12"  style="background-color:#303030;position:relative;border:solid 1px #404040;">
+                                                <a href="#">
+                                                    <div id="overlayx3">TopFEED
+                                                        <br/>
+                                                        <span style="font-size:14px">
+                                              veredelt Ihre Kerndaten mit wertvollen Zusatzinformationen und liefert erstklassige, konsistente Produktdaten wie Drucker, Warengruppen und Spezifikationen.
+                                            </span>
+                                                    </div>
+                                                </a>
+                                                <img class="pic_ref" data-aos="zoom-in" src="https://shopware6.topdata.de/media/f0/57/56/1680183728/ico04.png">
+">                                            </div>
+                                            <br/>
+                                            <p>
+                                                TopFEED
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div style="margin:auto;text-align:center;border: solid 1px #b9b9b9;background-color:#eee;padding-top:30px;padding-left:30px;padding-right:30px;margin-left:10px;margin-right:10px;">
+                                            <div id="main4" class="rahmen col-md-12"  style="background-color:#303030;position:relative">
+                                                <a href="#"><div id="overlayx4">TopCONNECTOR
+                                                        <br/>
+                                                        <span style="font-size:14px">
+                                             ist die bequeme Verbindung zu unserem Webservice und dient somit als Dreh und Angelpunkt für die Nutzung sämtlicher Plugins, auf Grundlage unserer Produktdaten.
+                                            </span>
+
+                                                    </div></a>
+                                                <img class="pic_ref" data-aos="zoom-in" src="https://shopware6.topdata.de/media/93/1a/78/1680183789/ico05.png">
+                                            </div>
+                                            <br/>
+                                            <p>
+                                                TopCONNECTOR
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4" style="text-align:right !important;margin:0px !important">
+                                        <div style="margin:auto;text-align:center;border: solid 1px #b9b9b9;background-color:#eee;padding-top:30px;padding-left:30px;padding-right:30px;">
+                                            <div id="main5" class="rahmen col-md-12"  style="background-color:#303030;position:relative">
+                                                <a href="#"><div id="overlayx5">TopFINDER
+                                                        <br/>
+                                                        <span style="font-size:14px">
+                                              ist eine intelligente Produktsuchmaschine für Drucker und deren Verbrauchsmaterialien, die sich kinderleicht in Ihre bestehende Shopware-Shoplösung integrieren lässt.
+                                            </span>
+
+                                                    </div></a>
+                                                <img class="pic_ref" data-aos="zoom-in" src="https://shopware6.topdata.de/media/96/85/b7/1680183808/ico06.png">
+                                            </div>
+                                            <br/>
+                                            <p>
+                                                TopFINDER
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                  <div class="row container" style="padding-left:0px !important;padding-right:0px !important;margin:auto;text-align:center;margin-top:70px">
+
+                                      <div class="col-lg-4" style="text-align:left !important;margin:0px !important">
+                                        <div style="margin:auto;text-align:center;border: solid 1px #b9b9b9;background-color:#eee;padding-top:30px;padding-left:30px;padding-right:30px;">
+                                            <div id="main" class="rahmen col-md-12"  style="background-color:#303030;position:relative">
+                                                <a href="#">
+                                                    <div id="overlayx">Kategorie Live-Suche
+                                                        <br/>
+                                                        <span style="font-size:14px">
+                                            Erweitert die Produktsuche um eine Spalte mit Kategorievorschlägen und ermöglicht es dem Nutzer direkt in die Kategorie zu navigieren
+                                        </span>
+                                                    </div>
+                                                </a>
+                                                <img class="pic_ref" data-aos="zoom-in" src="https://shopware6.topdata.de/media/7c/65/ac/1680183833/ico03.png">
+                                            </div>
+                                            <br/>
+                                            <p>
+                                                Kategorie Live-Suche
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div style="margin:auto;text-align:center;border: solid 1px #b9b9b9;background-color:#eee;padding-top:30px;padding-left:30px;padding-right:30px;margin-left:10px;margin-right:10px;">
+                                            <div id="main1" class="rahmen col-md-12"  style="background-color:#303030;position:relative">
+                                                <a href="#"><div id="overlayx1">Kategorie-Filter
+                                                        <br/>
+                                                        <span style="font-size:14px">
+                                            Ermöglicht ein bequemes Filtern der Produkte in der Produktlistenansicht nach Kategorien.
+                                        </span>
+                                                    </div></a>
+                                                <img class="pic_ref" data-aos="zoom-in" src="https://shopware6.topdata.de/media/3c/2c/a4/1680183853/ico01.png">
+                                            </div>
+                                            <br/>
+                                            <p>
+                                                Kategorie-Filter
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4" style="text-align:right !important;margin:0px !important">
+                                        <div style="margin:auto;text-align:center;border: solid 1px #b9b9b9;background-color:#eee;padding-top:30px;padding-left:30px;padding-right:30px;">
+                                            <div id="main2" class="rahmen col-md-12"  style="background-color:#303030;position:relative">
+                                                <a href="#"><div id="overlayx2">Produktvergleich
+                                                        <br/>
+                                                        <span style="font-size:14px">
+                                            Erlaubt ein komfortables und übersichtliches Vergleichen von Artikeln anhand der Spezifikationen.
+                                        </span>
+
+                                                    </div></a>
+                                                <img class="pic_ref" data-aos="zoom-in" src="https://shopware6.topdata.de/media/g0/77/a8/1680183871/ico02.png">
+                                            </div>
+                                            <br/>
+                                            <p>
+                                                Produktvergleich
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row container" style="padding-left:0px !important;padding-right:0px !important;margin:auto;text-align:center;margin-top:70px">
+                                    <div class="col-lg-4" style="text-align:left !important;margin:0px !important">
+                                        <div style="margin:auto;text-align:center;border: solid 1px #b9b9b9;background-color:#eee;padding-top:30px;padding-left:30px;padding-right:30px;">
+                                            <div id="main6" class="rahmen col-md-12"  style="background-color:#303030;position:relative">
+                                                <a href="#">
+                                                    <div id="overlayx6">Farbvorschau
+                                                        <br/>
+                                                        <span style="font-size:14px">
+                                              stellt mit Hilfe einer eigens hinterlegten Farbcode-Datenbank die erhältlichen Farben der Produkte dar.
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                                <img class="pic_ref" data-aos="zoom-in" src="https://shopware6.topdata.de/media/bc/c5/fc/1680183893/ico07.png">
+                                            </div>
+                                            <br/>
+                                            <p>
+                                                Farbvorschau
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div style="margin:auto;text-align:center;border: solid 1px #b9b9b9;background-color:#eee;padding-top:30px;padding-left:30px;padding-right:30px;margin-left:10px;margin-right:10px;">
+                                            <div id="main7" class="rahmen col-md-12"  style="background-color:#303030;position:relative">
+                                                <a href="#"><div id="overlayx7">PriceControl
+                                                        <br/>
+                                                        <span style="font-size:14px">
+                                               erlaubt es dem Shopbetreiber die Preise für Gäste oder bestimmte Kundengruppen auszublenden.
+                                            </span>
+                                                    </div></a>
+                                                <img class="pic_ref" data-aos="zoom-in" src="https://shopware6.topdata.de/media/11/2a/23/1680183910/ico08.png">
+                                            </div>
+                                            <br/>
+                                            <p>
+                                                PriceControl
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4" style="text-align:right !important;margin:0px !important">
+                                        <div style="margin:auto;text-align:center;border: solid 1px #b9b9b9;background-color:#eee;padding-top:30px;padding-left:30px;padding-right:30px;">
+                                            <div id="main8" class="rahmen col-md-12"  style="background-color:#303030;position:relative">
+                                                <a href="#"><div id="overlayx8">Elasticsearch-Konfigurator
+                                                        <br/>
+                                                        <span style="font-size:14px">
+                                                Konfiguriert die shopwareeigene Suche, so dass ein besseres Auffinden der Artikel im Shop möglich wird.
+                                            </span>
+                                                    </div></a>
+                                                <img class="pic_ref" data-aos="zoom-in" src="https://shopware6.topdata.de/media/55/b9/10/1680183927/ico09.png">
+                                            </div>
+                                            <br/>
+                                            <p>
+                                                Elasticsearch-Konfigurator
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="margin-top:80px;margin-bottom:50px;padding-top:90px;width:100%;height:300px;background-image:url('https://shopware6.topdata.de/media/00/68/16/1680183627/banner2.png');background-position:0px 100%;background-repeat:no-repeat;border-bottom: solid 1px #ededed;background-size:contain;">
+                                    <h1 style="color:#fff">SHOPWARE SHOPLÖSUNGEN</h1>
+                                    <br/>
+                                    <p style="color:#fff;font-size:20px;">
+                                        Die perfekte Basis für ein erfolgreiches eCommerce
+                                    </p>
+
+                                </div>
+                                <div class="row container" style="margin:auto;text-align:center;">
+                                    <div class="col-lg-5" style="text-align:left;margin-top:30px;">
+                                        <p style="font-size:18px;">
+                                            Das Shopsystem Shopware wurde von der in Deutschland ansässigen Shopware-AG entwickelt
+                                            und ist aktuell eines der fortschrittlichsten E-Commerce-Systeme auf dem europäischen Markt.
+                                        </p>
+                                        <p style="font-size:18px;">
+                                            Die stabile Shopsoftware liefert mit vielfältigen Konfigurationsmöglichkeiten und zahlreichen optionalen Plugins den Grundstein für einen effizienten Internethandel.
+                                        </p>
+                                        <p style="font-size:18px;">
+                                            Auch nach der Fertigstellung Ihres Shops stehen wir als kompetenter Ansprechpartner für Updates, Erweiterungen, Marketing oder Suchmaschinen-Optimierung jederzeit zur Verfügung.
+                                      </p>
+                                    </div>
+                                    <div class="col-lg-2" style="text-align:left;margin-top:30px;"></div>
+                                    <div class="col-lg-5" style="text-align:left;margin-top:30px;">
+                                        <p style="font-size:18px;">
+                                            Wir führen für Sie die vollständige Installation und Einrichtung Ihres Shopware-Shops, inklusive der benötigen Plugins, durch und bringen Sie Schritt für Schritt, ohne viel Aufwand, zu Ihrem eigenen Shopware-Onlineshop.
+                                        </p>
+                                        <p style="font-size:18px;">
+                                            Profitieren Sie optional von unserem hochperformanten Cloud-Hosting und einem proaktiven Support, der keine Wünsche offen lässt.
+                                        </p>
+                                        <p style="font-size:18px;">
+                                            Bitte nutzen Sie für eine erste Anfrage unser Kontaktformular oder kontaktieren uns telefonisch unter +49 (030) 27.87.41-0.
+                                            Gerne unterbreiten wir Ihnen ein persönliches Angebot.
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endblock %}
+                </div>
+            {% endblock %}
+        {% endblock %}
+    </div>
+{% endblock %}
