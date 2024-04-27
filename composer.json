@@ -17,7 +17,7 @@
         }
     },
     "extra":       {
-        "shopware-plugin-class": "Topdata\\TopdataThemeDemoshopSW6",
+        "shopware-plugin-class": "Topdata\\TopdataThemeDemoshopSW6\\TopdataThemeDemoshopSW6",
         "label":                 {
             "de-DE": "Topdata Theme Shopware6 Demoshop",
             "en-GB": "Topdata Theme Shopware6 Demoshop"
