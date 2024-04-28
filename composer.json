@@ -4,6 +4,9 @@
     "description": "Topdata Shopware 6 Demoshop Theme",
     "type":        "shopware-platform-plugin",
     "license":     "MIT",
+    "require": {
+        "shopware/core": "6.5.*"
+    },
     "authors":     [
         {
             "name":     "TopData Software GmbH",
