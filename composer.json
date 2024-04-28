@@ -1,6 +1,6 @@
 {
     "name":        "topdata-software-gmbh/topdata-theme-demoshop-sw6",
-    "version":     "1.0.0",
+    "version":     "2.0.0",
     "description": "Topdata Shopware 6 Demoshop Theme",
     "type":        "shopware-platform-plugin",
     "license":     "MIT",
